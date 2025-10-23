@@ -23,7 +23,7 @@ with st.form("form_ajout_article"):
             "content": content
         }
         try:
-            response = requests.post(f"{API_URL}/articles", json=new_article)
+            response = requests.post(f"{API_URL}/v1/articles", json=new_article)
             response.raise_for_status()
             st.success("Article créé avec succès !")
             st.link_button("Retour à la liste", "/", icon="⬅️")
